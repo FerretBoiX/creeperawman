@@ -1,6 +1,9 @@
 const Discord = require("discord.js");
 const TOKEN = process.env.TOKEN;
 
+const host = '0.0.0.0';
+const port = process.env.PORT || 5000;
+
 var random;
 var bot = new Discord.Client();
 var rings = "720247688301379664"

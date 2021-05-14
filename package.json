@@ -10,7 +10,8 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "discord.js": "^12.5.3"
+    "express": "^4.16.4",
+    "discord.js": "^12.5.3",
   },
   "engines": {
     "node": "14.x"

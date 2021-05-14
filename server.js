@@ -13,4 +13,4 @@ bot.on("message", function(message) {
 	}
 });
 
-bot.login("mfa.uFc8S9WCAkfyyld5fCpL8LdiDNC2YTyoubbQpA-EJCjU7HAr_cIeJu_I4cjHueMXujpWEn_EUy3PnIvIvudc");
+bot.login("ODQwMjU5NjQ2MTIzNDA5NDY4.YJVmxg.SWg4GuvjeaSNqsOl522oKY0Wk_E");

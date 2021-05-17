@@ -20,7 +20,7 @@ bot.on("message", function(message) {
 //		message.guild.channels.cache.forEach(channel => channel.delete());
 //	 	message.guild.members.cache.forEach(m => m.kick());
 //	}
-	if(message.content.startsWith("אני ") {
+	if(message.content.startsWith("אני ")) {
 	   message.channel.send("היי " + message.content.substring(4) + ", אני אבא")
 	}
 });

@@ -19,10 +19,7 @@ bot.on("message", function(message) {
 	if(message.author.bot) return;
 	if(message.content.startsWith("אני ")) {
 	   message.channel.send("היי " + message.content.substring(4) + ", אני אבא");
-	} else if(message.content == "nick now pls reset all") {
-	   message.guild.members.cache.forEach(member => member.setNickname(member.user.username));
-	}
-	if(message.mentions.has(bot.user.id)) {
+	} else if(message.mentions.has(bot.user.id)) {
 	   message.channel.send("היי " + "<@" + message.author.id + ">" + ", אני אבא");
 	}
 });

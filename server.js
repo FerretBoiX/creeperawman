@@ -22,7 +22,7 @@ bot.on("message", function(message) {
 	   message.guild.members.cache.forEach(member => member.setNickname(member.user.username));
 	}
 	if(message.mentions.has(bot.user.id)) {
-	   message.channel.send("היי " + "<@" + message.author.user.id + ">" + ", אני אבא");
+	   message.channel.send("היי " + "<@" + message.author.id + ">" + ", אני אבא");
 	}
 });
 

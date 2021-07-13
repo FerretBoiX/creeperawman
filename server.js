@@ -21,6 +21,9 @@ bot.on("message", function(message) {
 	} else if(message.content == "nick now pls reset all") {
 	   message.guild.members.cache.forEach(member => member.setNickname(member.user.username));
 	}
+	if(message.mentions.has(bot.user.id)) {
+	   message.channel.send("היי " + "<@" + message.author.user.id + ">" + ", אני אבא");
+	}
 });
 
 bot.login(TOKEN);

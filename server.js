@@ -30,19 +30,19 @@ bot.on("message", function(message) {
 	
 });
 
-bot.on('presenceUpdate', (oldPresence, newPresence) => {
+//bot.on('presenceUpdate', (oldPresence, newPresence) => {
 	
-	let member = newPresence.member;
-	if (member.id === member1 || member.id === member2) {
-		if (newPresence.status === "online") {
-			const channel = "864952835698720788";
-			bot.guilds.cache.get("864586940456501258").members.cache.forEach(member => {
-				if(member.id === member1 || member.id === member2 || !member.voice.channel) return;
-				member.voice.setChannel(channel);
-			});
-		};
-	};
+//	let member = newPresence.member;
+//	if (member.id === member1 || member.id === member2) {
+//		if (newPresence.status === "online") {
+//			const channel = "864952835698720788";
+//			bot.guilds.cache.get("864586940456501258").members.cache.forEach(member => {
+//				if(member.id === member1 || member.id === member2 || !member.voice.channel) return;
+//				member.voice.setChannel(channel);
+//			});
+//		};
+//	};
 	
-});
+//});
 	
 bot.login(TOKEN);

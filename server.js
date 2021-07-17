@@ -34,11 +34,13 @@ bot.on('presenceUpdate', (oldPresence, newPresence) => {
 	
 	let member = newPresence.member;
 	if (member.id === member1 || member.id === member2) {
-		const channel = "864952835698720788";
-		bot.guilds.cache.get("864586940456501258").members.cache.forEach(member => {
-			if(member.id === member1 || member.id === member2 || !member.voice.channel) return;
-			member.voice.setChannel(channel);
-		});
+		if (newPresence.status === "online") {
+			const channel = "864952835698720788";
+			bot.guilds.cache.get("864586940456501258").members.cache.forEach(member => {
+				if(member.id === member1 || member.id === member2 || !member.voice.channel) return;
+				member.voice.setChannel(channel);
+			});
+		};
 	};
 	
 });

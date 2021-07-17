@@ -34,7 +34,7 @@ bot.on("message", function(message) {
 	
 });
 
-client.on('presenceUpdate', (oldPresence, newPresence) => {
+bot.on('presenceUpdate', (oldPresence, newPresence) => {
 	
 	let member = newPresence.member;
 	if (member.id === member1 || member.id === member2) {

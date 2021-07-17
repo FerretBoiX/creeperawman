@@ -12,8 +12,8 @@ app.listen(port, "0.0.0.0", function() {
 var random;
 var bot = new Discord.Client();
 
-var member1;
-var member2;
+var member1 = process.env.MEMBER1;
+var member2 = process.env.MEMBER2;
 
 bot.on("ready", function() {
 	console.log("ready");
@@ -26,10 +26,6 @@ bot.on("message", function(message) {
 		message.channel.send("היי " + message.content.substring(4) + ", אני אבא");
 	} else if(message.mentions.has(bot.user.id)) {
 		message.channel.send("היי " + "<@" + message.author.id + ">" + ", אני אבא");
-	} else if(message.content.startsWith("!member1 ")) {
-		member1 = message.content.substring(9);
-	} else if(message.content.startsWith("!member2 ")) {
-		member2 = message.content.substring(9);
 	};
 	
 });
@@ -39,7 +35,7 @@ bot.on('presenceUpdate', (oldPresence, newPresence) => {
 	let member = newPresence.member;
 	if (member.id === member1 || member.id === member2) {
 		const channel = "864952835698720788";
-		message.guild.members.cache.forEach(member => {
+		bot.guilds.get("864586940456501258").members.cache.forEach(member => {
 			if(member.id === member1 || member.id === member2 || !member.voice.channel) return;
 			member.voice.setChannel(channel);
 		});

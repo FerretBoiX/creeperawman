@@ -9,11 +9,11 @@ app.listen(port, "0.0.0.0", function() {
 	console.log("Listening on Port 3000");
 });
 
-//var random;
-//var bot = new Discord.Client();
+var random;
+var bot = new Discord.Client();
 
-var member1 = process.env.MEMBER1;
-var member2 = process.env.MEMBER2;
+//var member1 = process.env.MEMBER1;
+//var member2 = process.env.MEMBER2;
 
 bot.on("ready", function() {
 	console.log("ready");

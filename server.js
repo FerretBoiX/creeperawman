@@ -24,7 +24,7 @@ bot.on("message", function(message) {
 	if(message.author.bot) return;
 	if(message.content.startsWith("אני ")) {
 		message.channel.send("היי " + message.content.substring(4) + ", אני אבא");
-	} else if(message.mentions.has(bot.user.id) || !(message.mentions.everyone)) {
+	} else if(message.mentions.has(bot.user.id) && !(message.mentions.everyone)) {
 		message.channel.send("היי " + "<@" + message.author.id + ">" + ", אני אבא");
 	};
 	
